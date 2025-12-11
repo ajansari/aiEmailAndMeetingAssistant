@@ -1,7 +1,12 @@
 # aiEmailAndMeetingAssistant
 This is an open source Copilot Studio Autonomous AI Email Meeting Assistant
 
-# This repository contains an Unmanaged solution export of the Agent if you would like to import and test on your end
+# This repository contains a ziped Unmanaged solution export of the Agent if you would like to import and test on your end
+The quickest way to put this agent to use is to navigate to the 'Agents' menu/page in Copilot Studio, click 'Import Agent', and select this .zip file to be imported
+
+# Source Code
+Source is included in the folder /source for review and comparison purposes. At this time (December 2025), there is no official mechanism to publish this source to create a new Agent in Copilot Studio.
+
 
 # In this repo, you will find three different Instruction sets for an autonomous agent that can answer emails and schedule metings on your behalf: Basic, Intermediate, Advanced. The zipped Solution included in this repo has the Advanced instructions
 
@@ -12,6 +17,7 @@ This is an open source Copilot Studio Autonomous AI Email Meeting Assistant
 -The Advanced instruction set also searches for meeting conflicts, proposes other meeting times, and can handle multi-turn conversations. 
 
 # This Agent is created in Copilot Studio with GPT 5 (Chat) as the Model.
+-For autonomous agents that need to reason on data and tasks, we would typically use a reasoning model like GPT 5 (Reasoning) or Claude Opus 4.5, but in this situation, GPT 5 (Chat) has worked just fine. I suspect that in the future, Copilot Studio credit consumption will vary by the model selected, so this agent uses a model which should be fairly affordable.
 
 # The agent uses the following Tools:
 -Office 365 Outlook > Get emails (V3)
@@ -31,4 +37,7 @@ This is an open source Copilot Studio Autonomous AI Email Meeting Assistant
 # Known Limitations in Advanced instructions: 
 -The agent does not have any instructions on handling Meeting Update or Delete requests. Because of the :Meeting Management MCP Server", it may partially handle this request but may fail on subsequent steps.
 -Handling for above limitation can be added by further ehnancing the Advanced instructions. No additional tool should be required.
+
+# Ideas for Enhancement
+-Use a tool like Twilio, BulkSMS, etc. to send the Principal (whoever this AI Assistant is going to assist) an SMS text message when an incoming email requires some input that only the human would know, or a human-in-the-loop decision situation. The Principal would text back a short message with guidance on how the AI Assistant should respond, and it would then send a professional email to that effect.
 
