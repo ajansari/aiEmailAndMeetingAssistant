@@ -1,0 +1,23 @@
+# Name: Office 365 Outlook - Reply to email (V3)
+kind: TaskDialog
+inputs:
+  - kind: AutomaticTaskInput
+    propertyName: messageId
+
+  - kind: AutomaticTaskInput
+    propertyName: Body
+
+modelDisplayName: Reply to email (V3)
+modelDescription: This operation replies to an email.
+outputs:
+  - propertyName: Response
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: auto_agent_SEg8B.shared_office365.10bde9896f044dae8ab2f011ec5e5fd9
+  connectionProperties:
+    mode: Maker
+
+  operationId: ReplyToV3
+
+outputMode: All

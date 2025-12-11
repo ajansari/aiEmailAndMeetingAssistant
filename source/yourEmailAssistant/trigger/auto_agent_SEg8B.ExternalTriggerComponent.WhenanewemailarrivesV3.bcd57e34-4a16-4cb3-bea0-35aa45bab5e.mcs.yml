@@ -1,0 +1,11 @@
+# Name: When a new email arrives (V3)
+# Trigger your agent with certain message upon event: When a new email arrives (V3).
+kind: ExternalTriggerConfiguration
+externalTriggerSource:
+  kind: WorkflowExternalTrigger
+  flowId: 099d7743-15d6-f011-8544-6045bd05edcc
+
+extensionData:
+  flowName: a443e9ee-5509-bade-319f-4e11f6a89b14
+  flowUrl: /providers/Microsoft.ProcessSimple/environments/fbda7fd9-1c3a-ed99-bcfc-8b09af5bb402/flows/a443e9ee-5509-bade-319f-4e11f6a89b14
+  triggerConnectionType: Office 365 Outlook

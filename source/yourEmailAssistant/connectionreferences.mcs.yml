@@ -1,0 +1,5 @@
+﻿connectionReferences:
+  - connectionReferenceLogicalName: auto_agent_SEg8B.shared_office365.10bde9896f044dae8ab2f011ec5e5fd9
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_office365
+  - connectionReferenceLogicalName: auto_agent_SEg8B.shared_office365.10bde9896f044dae8ab2f011ec5e5fd9
+    connectorId: /providers/Microsoft.PowerApps/apis/shared_office365

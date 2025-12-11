@@ -1,0 +1,29 @@
+# Name: Office 365 Outlook - Get emails (V3)
+kind: TaskDialog
+inputs:
+  - kind: ManualTaskInput
+    propertyName: folderPath
+    value: Id::AAMkAGFmMDdkYmU4LTExZDAtNDJlMy1hOTdlLWQyZmZhOWM1ZDEwNwAuAAAAAAChUxfy-WhASIjI_o8gcHstAQDQOYqzml6MR678bqZdYu9eAAAWEaDRAAA=
+
+  - kind: ManualTaskInput
+    propertyName: importance
+    value: High
+
+  - kind: ManualTaskInput
+    propertyName: top
+    value: 1
+
+modelDisplayName: Get emails (V3)
+modelDescription: "This operation gets emails from a folder via graph apis. Please note that filtering related to these fields: To, Cc, To Or Cc, From, Importance, Fetch Only With Attachments, Subject Filter, is performed using first 250 items in a given mail folder. To avoid that limitation you can use 'Search Query' field."
+outputs:
+  - propertyName: value
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: auto_agent_SEg8B.shared_office365.10bde9896f044dae8ab2f011ec5e5fd9
+  connectionProperties:
+    mode: Maker
+
+  operationId: GetEmailsV3
+
+outputMode: All

@@ -1,0 +1,21 @@
+# Name: Office 365 Outlook - Mark as read or unread (V3)
+kind: TaskDialog
+inputs:
+  - kind: ManualTaskInput
+    propertyName: isRead
+    value: true
+
+modelDisplayName: Mark as read or unread (V3)
+modelDescription: This operation marks an email as read/unread.
+outputs:
+  - propertyName: Response
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: auto_agent_SEg8B.shared_office365.10bde9896f044dae8ab2f011ec5e5fd9
+  connectionProperties:
+    mode: Maker
+
+  operationId: MarkAsRead_V3
+
+outputMode: All

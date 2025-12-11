@@ -1,0 +1,25 @@
+﻿displayName: Your Email Assistant
+schemaName: auto_agent_SEg8B
+accessControlPolicy: ChatbotReaders
+authenticationMode: Integrated
+authenticationTrigger: Always
+configuration:
+  settings:
+    GenerativeActionsEnabled: true
+
+  isAgentConnectable: true
+  gPTSettings:
+    defaultSchemaName: auto_agent_SEg8B.gpt.default
+
+  aISettings:
+    useModelKnowledge: true
+    isFileAnalysisEnabled: true
+    isSemanticSearchEnabled: true
+    optInUseLatestModels: false
+
+  recognizer:
+    kind: GenerativeAIRecognizer
+
+publishedOn: 2025-12-11T03:06:01.0000000Z
+template: default-2.1.0
+language: 1033

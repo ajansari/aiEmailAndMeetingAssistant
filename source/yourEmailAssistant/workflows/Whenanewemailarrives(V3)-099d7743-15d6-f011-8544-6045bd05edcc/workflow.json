@@ -1,0 +1,75 @@
+﻿{
+  "properties": {
+    "connectionReferences": {
+      "shared_office365": {
+        "api": {
+          "name": "shared_office365"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "crcf5_bcMcpAgentSimpleHtml.shared_office365.10bde9896f044dae8ab2f011ec5e5fd9"
+        },
+        "runtimeSource": "embedded"
+      },
+      "shared_microsoftcopilotstudio": {
+        "api": {
+          "name": "shared_microsoftcopilotstudio"
+        },
+        "connection": {
+          "connectionReferenceLogicalName": "crcf5_sharedmicrosoftcopilotstudio_1c99e"
+        },
+        "runtimeSource": "embedded"
+      }
+    },
+    "definition": {
+      "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+      "contentVersion": "1.0.0.0",
+      "parameters": {
+        "$authentication": {
+          "defaultValue": {},
+          "type": "SecureObject"
+        },
+        "$connections": {
+          "defaultValue": {},
+          "type": "Object"
+        }
+      },
+      "triggers": {
+        "When_a_new_email_arrives_(V3)": {
+          "type": "OpenApiConnectionNotification",
+          "inputs": {
+            "parameters": {
+              "folderPath": "Id::AAMkAGFmMDdkYmU4LTExZDAtNDJlMy1hOTdlLWQyZmZhOWM1ZDEwNwAuAAAAAAChUxfy-WhASIjI_o8gcHstAQDQOYqzml6MR678bqZdYu9eAAAWEaDRAAA="
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365",
+              "operationId": "OnNewEmailV3",
+              "connectionName": "shared_office365"
+            }
+          },
+          "metadata": {
+            "Id::AAMkAGFmMDdkYmU4LTExZDAtNDJlMy1hOTdlLWQyZmZhOWM1ZDEwNwAuAAAAAAChUxfy-WhASIjI_o8gcHstAQDQOYqzml6MR678bqZdYu9eAAAWEaDRAAA=": "Vetted"
+          }
+        }
+      },
+      "actions": {
+        "Sends_a_prompt_to_the_specified_copilot_for_processing": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "Copilot": "auto_agent_SEg8B",
+              "body/message": "Use content from @{triggerBody()}"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_microsoftcopilotstudio",
+              "operationId": "ExecuteCopilot",
+              "connectionName": "shared_microsoftcopilotstudio"
+            }
+          },
+          "runAfter": {}
+        }
+      },
+      "description": "Trigger your agent with certain message upon event: When a new email arrives (V3)."
+    }
+  },
+  "schemaVersion": "1.0.0.0"
+}

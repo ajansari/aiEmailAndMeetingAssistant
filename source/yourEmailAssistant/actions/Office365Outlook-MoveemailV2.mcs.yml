@@ -1,0 +1,55 @@
+# Name: Office 365 Outlook - Move email (V2)
+kind: TaskDialog
+inputs:
+  - kind: ManualTaskInput
+    propertyName: folderPath
+    value: Id::AAMkAGFmMDdkYmU4LTExZDAtNDJlMy1hOTdlLWQyZmZhOWM1ZDEwNwAuAAAAAAChUxfy-WhASIjI_o8gcHstAQDQOYqzml6MR678bqZdYu9eAAAWEaDTAAA=
+
+modelDisplayName: Move email (V2)
+modelDescription: This operation moves an email to the specified folder within the same mailbox.
+outputs:
+  - propertyName: attachments
+
+  - propertyName: bccRecipients
+
+  - propertyName: body
+
+  - propertyName: bodyPreview
+
+  - propertyName: ccRecipients
+
+  - propertyName: conversationId
+
+  - propertyName: from
+
+  - propertyName: hasAttachments
+
+  - propertyName: id
+
+  - propertyName: importance
+
+  - propertyName: internetMessageId
+
+  - propertyName: isHtml
+
+  - propertyName: isRead
+
+  - propertyName: receivedDateTime
+
+  - propertyName: replyTo
+
+  - propertyName: sensitivityLabelInfo
+
+  - propertyName: subject
+
+  - propertyName: toRecipients
+
+action:
+  kind: InvokeConnectorTaskAction
+  connectionReference: auto_agent_SEg8B.shared_office365.10bde9896f044dae8ab2f011ec5e5fd9
+  connectionProperties:
+    mode: Maker
+
+  operationId: MoveV2
+
+outputMode: All
