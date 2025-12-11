@@ -1,9 +1,9 @@
 # aiEmailAndMeetingAssistant
 This is an open source Copilot Studio Autonomous AI Email Meeting Assistant
 
-# This repository contains an Unmanaged export of the Agent if you would like to import and test on your end
+# This repository contains an Unmanaged solution export of the Agent if you would like to import and test on your end
 
-# In this repo, you will find three different Instruction sets for an autonomous agent that can answer emails and schedule metings on your behalf: Basic, Intermediate, Advanced.
+# In this repo, you will find three different Instruction sets for an autonomous agent that can answer emails and schedule metings on your behalf: Basic, Intermediate, Advanced. The zipped Solution included in this repo has the Advanced instructions
 
 -The Basic instruction set is for an mvp (minimum viable product) agent that can respond to emails on your behalf once you've put them into a vetted folder.
 
